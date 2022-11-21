@@ -43,17 +43,18 @@ namespace Wingandprayer.PiTree3D.RgbXmasTree
             _spiDevice = new SoftwareSpi(25, -1, 12);
             Off();
             Mode = BrightnessMode.UseMasterBrightness;
-            Brightness = 31;
+            Brightness = 1;
         }
 
         public BrightnessMode Mode { get; set; }
 
         public IndexMode IndexMode { get; set; }
 
-        public byte Brightness
+        public float Brightness
         {
-            get => _brightness;
-            set => _brightness = Math.Min((byte)31, value);
+            // ReSharper disable once PossibleLossOfFraction
+            get => _brightness / 31;
+            set => _brightness = (byte)Math.Min(31, value * 31);
         }
 
         public Color Color
@@ -82,7 +83,7 @@ namespace Wingandprayer.PiTree3D.RgbXmasTree
 
             for (int i = 0; i < NumLights; i++)
             {
-                buffer[(i + 1) * 4 + 0] = (byte)((Mode == BrightnessMode.UseColorAlpha ? _lights[i].A / 32 : Brightness) | 0b11100000);
+                buffer[(i + 1) * 4 + 0] = (byte)((Mode == BrightnessMode.UseColorAlpha ? _lights[i].A / 32 : _brightness) | 0b11100000);
                 buffer[(i + 1) * 4 + 1] = _lights[i].B;
                 buffer[(i + 1) * 4 + 2] = _lights[i].G;
                 buffer[(i + 1) * 4 + 3] = _lights[i].R;

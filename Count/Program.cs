@@ -11,7 +11,7 @@ namespace Wingandprayer.PiTree3D.Tinsel
 
             Random rnd = new();
 
-            using RgbXmasTree.RgbXmasTree tree = new() { IndexMode = IndexMode.Tinsel, Mode = BrightnessMode.UseMasterBrightness, Brightness = 16 };
+            using RgbXmasTree.RgbXmasTree tree = new() { IndexMode = IndexMode.Tinsel, Mode = BrightnessMode.UseMasterBrightness, Brightness = 0.5F };
 
             Console.CancelKeyPress += (_, eventArgs) => { eventArgs.Cancel = true; running = false; };
 

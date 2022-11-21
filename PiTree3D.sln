@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomSparkles", "RandomSpa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tinsel", "Count\Tinsel.csproj", "{CD20CF12-0E80-46C6-9D77-8E09BE916370}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swirl", "Swirl\Swirl.csproj", "{FFE5A934-6FCE-4AE9-9D09-17B3F4477AB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{CD20CF12-0E80-46C6-9D77-8E09BE916370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD20CF12-0E80-46C6-9D77-8E09BE916370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD20CF12-0E80-46C6-9D77-8E09BE916370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE5A934-6FCE-4AE9-9D09-17B3F4477AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE5A934-6FCE-4AE9-9D09-17B3F4477AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE5A934-6FCE-4AE9-9D09-17B3F4477AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE5A934-6FCE-4AE9-9D09-17B3F4477AB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
